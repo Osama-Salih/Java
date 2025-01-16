@@ -58,19 +58,105 @@ public class App {
        
        Scanner in = new Scanner(System.in);
 
-       float sum = 0;
-       float grade = 0;
-       int count = 0;
+    //    float sum = 0;
+    //    float grade = 0;
+    //    int count = 0;
 
-       while (grade != -1) {
-        System.out.println("Enter grade # " + (count + 1) + ": ");
-        grade = in.nextFloat();
+    //    while (grade != -1) {
+    //     System.out.println("Enter grade # " + (count + 1) + ": ");
+    //     grade = in.nextFloat();
 
-        if (grade != -1) {
-            sum += grade;
-            count++;
+    //     if (grade != -1) {
+    //         sum += grade;
+    //         count++;
+    //     }
+    //    }
+    //    System.out.println("Avg = " + sum / count);
+
+    
+        for (int i = 0, j = 5; i < 8 || j >= 0; i++, j--) {
+            System.out.println("i = " + i + "\t" + "j = " + j);
         }
-       }
-       System.out.println("Avg = " + sum / count);
+
+        // Write a program to print numbers from 1 to 10.
+        for (int i = 1; i <= 10; i++) {
+            System.out.println(i);
+        }
+
+        // Write a program to calculate the sum of 10 floating point numbers.
+        float sum = 0;
+        for (float i = 0; i <= 10; i++) {
+            sum+=i;
+        }
+        System.out.println(sum);
+
+        // Write a program that asking the user to input a positive integer number. 
+        // It should then print the multiplication table for that number.
+        System.out.print("Enter a positive number: ");
+        int num = in.nextInt();
+
+        if (num < 0)
+        System.out.println("It should be a positive number!");
+
+        else {
+        for (int i = 1; i <= 12; i++) {
+            System.out.println(i + " * " + num  + " = "+(i * num));   
+        }
     }
+
+        // Write a program to find the factorial value of any number
+        int factorial = 1;
+        System.out.print("Enter any number: ");
+        int num1 = in.nextInt();
+        for (int i = num1; i > 1; i--) {
+            factorial *= i;   
+        }
+        System.out.println("factorial = " + factorial);
+
+        // Write a program that enters 10 int numbers from the user and than prints the sum of the even and odd numbers
+        int sumEven = 0;
+        int sumOdd = 0;
+        for (int i = 1; i <= 10; i++) {
+            System.out.println("Enter number: " + i);
+            int num = in.nextInt();
+            if (num < 0) 
+            System.out.println("Invalid number");
+            
+            if (num % 2 == 0)
+            sumEven += num;
+            else 
+            sumOdd += num;
+        }
+        System.out.println("The sum of even numbers are: " + sumEven);
+        System.out.println("The sum of odd numbers are: " + sumOdd);
+
+
+        // Write a program that enters 10 int numbers from the user and than prints the number of the even and odd numbers
+        int countEven = 0;
+        int countOdd = 0;
+        for (int i = 1; i <= 10; i++) {
+            System.out.println("Enter number: " + i);
+            int num = in.nextInt();
+            if (num < 0) 
+            System.out.println("Invalid number");
+            
+            if (num % 2 == 0)
+            countEven++;
+            else 
+            countOdd++;
+        }
+        System.out.println("The numbers of even numbers are: " + countEven);
+        System.out.println("The numbers of odd numbers are: " + countOdd);
+
+
+        // Write a program to calculate the sum of following series 
+        // 1 + 1/2 + 1/3 + 1/4 + ...1/n
+        int n = in.nextInt();
+        float sum = 0;
+        for (int i = 1; i <= n; i++) {
+            sum += 1.0/i;
+        }
+        System.out.println("sum = " + sum);
+   
+    } 
 }
